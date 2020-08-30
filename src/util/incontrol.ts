@@ -147,7 +147,7 @@ export class InControlService {
 
     const result = await this.sendRequest(
       "POST",
-      "https://jlp-ifas.wirelesscar.net/ifas/jlr/tokens",
+      "https://ifas.prod-row.jlrmotor.com/ifas/jlr/tokens",
       headers,
       json,
     );
@@ -199,7 +199,7 @@ export class InControlService {
 
     const result = await this.sendRequest(
       "POST",
-      `https://jlp-ifop.wirelesscar.net/ifop/jlr/users/${username}/clients`,
+      `https://ifop.prod-row.jlrmotor.com/ifop/jlr/users/{{username}}/clients`,
       headers,
       json,
       true,
@@ -228,7 +228,7 @@ export class InControlService {
 
     const result = await this.sendRequest(
       "GET",
-      `https://jlp-ifoa.wirelesscar.net/if9/jlr/users?loginName=${username}`,
+      `https://if9.prod-row.jlrmotor.com/if9/jlr/users?loginName={{username}}`,
       headers,
     );
 
@@ -260,7 +260,7 @@ export class InControlService {
 
     var response = await this.sendRequest(
       "POST",
-      `https://jlp-ifoa.wirelesscar.net/if9/jlr/vehicles/${vin}/users/${
+      `https://if9.prod-row.jlrmotor.com/if9/jlr/vehicles/{{vin}}/attributes{
         auth.userId
       }/authenticate`,
       headers,
@@ -289,7 +289,7 @@ export class InControlService {
 
     await this.sendRequest(
       "POST",
-      `https://jlp-ifoa.wirelesscar.net/if9/jlr/vehicles/${vin}/${
+      `https://if9.prod-row.jlrmotor.com/if9/jlr/vehicles/{{vin}}/status{
         operation.name
       }`,
       headers,
@@ -320,7 +320,7 @@ export class InControlService {
 
     await this.sendRequest(
       "POST",
-      `https://jlp-ifoa.wirelesscar.net/if9/jlr/vehicles/${vin}/${service}`,
+      `https://if9.prod-row.jlrmotor.com/if9/jlr/vehicles/{{vin}}/preconditioning${service}`,
       headers,
       json,
     );
@@ -346,7 +346,7 @@ export class InControlService {
 
     return await this.sendRequest(
       "GET",
-      `https://jlp-ifoa.wirelesscar.net/if9/jlr/vehicles/${vin}/${name}`,
+      `https://if9.prod-row.jlrmotor.com/if9/jlr/vehicles/{{vin}}/attributes${name}`,
       headers,
     );
   };
