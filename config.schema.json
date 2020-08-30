@@ -1,5 +1,5 @@
-{
-  "pluginAlias": "Tesla",
+r{
+  "pluginAlias": "Land Rover",
   "pluginType": "accessory",
   "schema": {
     "type": "object",
@@ -8,7 +8,7 @@
         "title": "name",
         "type": "string",
         "required": true,
-        "default": "Model S"
+        "default": "Velar"
       },
       "vin": {
         "title": "VIN",
@@ -24,25 +24,25 @@
         "description": "Read the <a href='https://github.com/nfarina/homebridge-tesla'>documentation</a> to learn how to create a token."
       },
       "username": {
-        "title": "Tesla username (not required when using authentication token)",
+        "title": "JLR username (not required when using authentication token)",
         "type": "string",
         "required": false,
         "default": ""
       },
       "password": {
-        "title": "Tesla password (not required when using authentication token)",
+        "title": "JLR password (not required when using authentication token)",
         "type": "string",
         "required": false,
         "default": ""
       },
       "waitMinutes": {
-        "title": "Time in minutes to wait for the car to wake up (default is 1 minute)",
+        "title": "Time in minutes to wait for the car to wake up (default is 2 minute)",
         "type": "integer",
-        "default": 1,
+        "default": 2,
         "maximum": 10,
         "minimum": 1,
         "required": false,
-        "description": "Default is one (1) minute."
+        "description": "Default is one (2) minute."
       },
       "latitude": {
         "title": "Latitude of HomeLink device",
